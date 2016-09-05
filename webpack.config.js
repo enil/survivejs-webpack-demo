@@ -31,10 +31,14 @@ var config;
 
 switch (TARGET) {
   case 'build':
-    config = merge(common, {});
+    config = merge(
+      common,
+      parts.setupCSS(PATHS.app)
+    );
   default:
     config = merge(
       common,
+      parts.setupCSS(PATHS.app),
       parts.devServer({
         host: process.env.HOST,
         port: process.env.PORT
