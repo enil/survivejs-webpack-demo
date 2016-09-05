@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const validate = require('webpack-validator');
 
 var TARGET = process.env.npm_lifecycle_event;
 
@@ -33,5 +34,5 @@ switch (TARGET) {
     config = merge(common, {});
 }
 
-module.exports = config;
+module.exports = validate(config);
 
