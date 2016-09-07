@@ -36,8 +36,10 @@ switch (TARGET) {
       {
         devtool: 'source-map'
       },
+      parts.minify(),
       parts.setupCSS(PATHS.app)
     );
+    break;
   default:
     config = merge(
       common,
