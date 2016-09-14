@@ -49,6 +49,7 @@ switch (TARGET) {
         name: 'vendor',
         entries: ['react']
       }),
+      parts.clean(PATHS.build),
       parts.minify(),
       parts.setupCSS(PATHS.app)
     );
