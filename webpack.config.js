@@ -51,7 +51,7 @@ switch (TARGET) {
       }),
       parts.clean(PATHS.build),
       parts.minify(),
-      parts.setupCSS(PATHS.app)
+      parts.extractCSS(PATHS.app)
     );
     break;
   default:
