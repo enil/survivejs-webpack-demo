@@ -36,6 +36,7 @@ var config;
 
 switch (TARGET) {
   case 'build':
+  case 'stats':
     config = merge(
       common,
       {
@@ -74,5 +75,7 @@ switch (TARGET) {
     );
 }
 
-module.exports = validate(config);
+module.exports = validate(config, {
+  quiet: true
+});
 
