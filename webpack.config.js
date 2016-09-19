@@ -23,6 +23,7 @@ const common = {
   },
   output: {
     path: PATHS.build,
+    publicPath: '/survivejs-webpack-demo/',
     filename: '[name].js'
   },
   plugins: [
